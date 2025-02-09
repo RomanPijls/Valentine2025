@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Lily</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/sketch.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="introText" id="intro">
+      <p>Would you be my valentine?</p>
+    </div>
+    <div class="startButton_container">
+      <button id="startButton">
+        <img id="smallHeart" src="img/heart_drawn.png" alt="Start Button" />
+        <p>Yes</p>
+      </button>
+    </div>
+
+    <div id="scene1" class="scene1">
+        <div class="scene1textbox">
+          <div class="scene1text0">
+            <p>To Lilly,</p>
+          </div>
+          <div class="scene1text1">
+            <p>Happy Valentine's day! We've had another amazing year since we celebrated our first valentine in Happy Italy, and I'm so happy we got to spend another one together</p>
+          </div>
+          <div class="scene1text2">
+            <p>Picnics on hot summer days, cuddling on cold winter nights, we've made a lot of amazing memories</p>
+          </div>
+          <div class="scene1text3">
+            <p>So lets take a moment to look back at all those wonderful moments, together</p>
+        </div>
+        <button class="scene1button" id="scene1button">
+          <img src="img/dipper1.png" alt="Next Button" />
+          <p>Let's see 'em!</p>
+        </button>
+        </div>
+    </div>
+
+    <div class="scene2" id="scene2">
+      <p class="swipe">< Swipe ></p>
+      <div class="image-group-wrapper">
+        <div class="image-group-container">
+          <div class="image-group">
+            <img src="img/renfair_group1.jpg" alt="Group 1 Image 1">
+            <img src="img/renfair_group2.jpg" alt="Group 1 Image 2">
+            <img src="img/renfair_group3.jpg" alt="Group 1 Image 3">
+          </div>
+        </div>
+        <div class="image-caption"><p>We started the year of strong with our first renfair as a group. It was an amazing day, even if the hat got kinda annoying at the end. </p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container">
+          <div class="image-group">
+            <img src="img/renfair_solo1.jpg" alt="Group 1 Image 1">
+            <img src="img/renfair_solo2.jpg" alt="Group 1 Image 2">
+            <img src="img/renfair_solo3.jpg" alt="Group 1 Image 3">
+          </div>
+        </div>
+        <div class="image-caption"><p>Can't forget the solo renfair. We procrastinated making our costumes for so long we had to throw something together at the last minute.</p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container">
+          <div class="image-group">
+            <img src="img/work1.jpg" alt="Group 2 Image 1">
+            <img src="img/work2.jpg" alt="Group 2 Image 2">
+            <img src="img/work3.jpg" alt="Group 2 Image 3">
+            <img src="img/work4.jpg" alt="Group 2 Image 4">
+          </div>
+        </div>
+        <div class="image-caption"><p>We worked together at Notker's with Roel. We had some amazing days, and the view was beautiful. Look at my girl here, loving the gardening life!</p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container">
+          <div class="image-group">
+            <img src="img/london1.jpg" alt="Group 2 Image 1">
+            <img src="img/london2.JPG" alt="Group 2 Image 2">
+            <img src="img/london3.jpg" alt="Group 2 Image 3">
+          </div>
+        </div>
+        <div class="image-caption"><p>And our summer London trip, I'll never forget having to sleep under people jerking off. At least the Natural History Museum rocked!</p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container">
+          <div class="image-group">
+            <img src="img/gamescom2.JPG" alt="Group 2 Image 1">
+            <img src="img/gamescom1.JPG" alt="Group 2 Image 2">
+          </div>
+        </div>
+        <div class="image-caption"><p>We took da bimp to your parents place when we went to Gamescom. You even showed me a real medieval tower where a battle was fought!</p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container thin-container">
+          <div class="image-group">
+            <img src="img/dnd1.JPG" alt="Group 2 Image 1">
+            <img src="img/dnd2.JPG" alt="Group 2 Image 2">
+            <img src="img/dnd3.JPG" alt="Group 2 Image 3">
+          </div>
+        </div>
+        <div class="image-caption"><p>You ran your very first D&D campaign, and actually managed to finish it! Very impressive, even if it did end up costing me an arm and a leg ;-)</p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container thin-container">
+          <div class="image-group">
+            <img src="img/party1.JPG" alt="Group 2 Image 1">
+            <img src="img/party2.jpg" alt="Group 2 Image 2">
+          </div>
+        </div>
+        <div class="image-caption"><p>As always, we had a lot of parties with our friends. Many braincells were lost, but many memories were gained! (and then lost again)</p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container">
+          <div class="image-group">
+            <img src="img/kevin1.jpg" alt="Group 2 Image 1">
+            <img src="img/kevin2.jpg" alt="Group 2 Image 2">
+            <img src="img/kevin3.jpg" alt="Group 2 Image 3">
+          </div>
+        </div>
+        <div class="image-caption"><p>We birthed our very own son, Kevin. Eventually we had to throw him in the trash because he stank, but we'll never forget him.</p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container thin-container">
+          <div class="image-group">
+            <img src="img/picnic1.jpg" alt="Group 2 Image 1">
+            <img src="img/picnic2.jpg" alt="Group 2 Image 2">
+          </div>
+        </div>
+        <div class="image-caption"><p>We ended the summer with an amazing picnic with the dip, overlooking the town for an amazing view. The most classic of dates!</p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container">
+          <div class="image-group">
+            <img src="img/emotional.jpg" alt="Group 2 Image 1">
+          </div>
+        </div>
+        <div class="image-caption"><p>Of course, it wasn't all smiles. My girlie is nothing if not emotional.</p></div>
+      </div>
+      <div class="image-group-wrapper">
+        <div class="image-group-container">
+          <div class="image-group">
+            <img src="img/final.jpg" alt="Group 2 Image 1">
+          </div>
+        </div>
+        <div class="image-caption"><p>But nontheless, it was an amazing year full of memories we'll never forget!</p></div>
+      </div>
+
+      <button class="scene1button scene2button" id="scene2button">
+        <img src="img/dipper1.png" alt="Next Button" />
+        <p>But we're not done yet!</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    background-color: #41051f;
+    transition: background-color 3s ease-in-out;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: "Indie Flower", serif;
+}
+.startButton_container{
+    width: 150px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.startButton_container img{
+    max-width: 100%;
+    height: auto;
+    animation: pulse 2s infinite ease-in-out;
+}
+#startButton{
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+#startButton p{
+    font-size: 2em;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: pulse 2s infinite ease-in-out;
+    width: 100px;
+}
+.introText{
+    position: relative;
+    Width: 250px;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.introText p{
+    font-size: 2em;
+    text-align: center;
+    color: #d6c6d4;
+    margin-top: 10%;
+}
+.heart {
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 45%;
+    animation: drift 2s ease-in-out;
+    z-index: -1;
+}
+.heart-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+.scene1{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffb8d7;
+    text-align: center;
+    /* background-image: url("/img/flower_background.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+.scene2button{
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 10px !important;
+}
+.swipe{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.8em;
+}
+.scene1textbox{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.scene1 p{
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+.scene1button{
+    margin-top: 50px;
+    border: none;
+    background-color: #ffb8d7;
+    border-radius: 25px;
+}
+.scene1button p{
+    font-size: 2em;
+    animation: pulse 2s infinite ease-in-out;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.scene1button img{
+    margin-top: 15px;
+    width: 100px;
+    height: auto;
+    animation: pulse 2s infinite ease-in-out;
+}
+.scene2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffb8d7;
+    overflow-y: auto;
+    padding-top: 20px;
+    display: none;
+}
+.image-container {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.image-caption {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+}
+.image-group-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.image-group-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 20px;
+    display: flex;
+    align-items: center; /* Center images vertically */
+    justify-content: center; /* Center images horizontally */
+    height: 500px; /* Adjust as needed */
+    position: relative;
+}
+.image-group-wrapper .image-caption {
+    margin-top: -25px; /* Adjust this value as needed */
+}
+.image-group-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+.image-group {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+
+
+.image-group img {
+    max-width: 100%; /* Ensure images take full width of their container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 450px; /* Ensure images do not exceed container height */
+    margin-right: 10px;
+	border-radius: 20px;
+    object-fit: contain; /* Maintain aspect ratio */
+    vertical-align: middle; /* Center images vertically */
+}
+.thin-container{
+    height: 300px;
+}
+/*Keyframes*/
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); } /* Slightly bigger */
+    100% { transform: scale(1); }
+}
+@keyframes drift {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      transform: translate(calc(-50% + var(--drift-x)), calc(-50% + var(--drift-y)));
+    }
+}
+.fade-in {
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 3s ease-in-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
