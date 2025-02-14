@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const startButton = document.getElementById('startButton');
   const scene1Button = document.getElementById('scene1button');
+  const scene2Button = document.getElementById('scene2button');
   const intro = document.getElementById('intro');
   const scene1 = document.getElementById('scene1');
   const scene2 = document.getElementById('scene2');
+  const scene3 = document.getElementById('scene3');
+  const rocket = document.getElementById('rocket');
+  const moon = document.getElementById('moon');
+  const valentineText = document.getElementById('valentineText');
   const body = document.body;
 
   if (startButton && intro && scene1) {
@@ -31,6 +36,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 3000); // Adjust this timeout to match the duration of your fade-out animation
     });
   }
+
+  if (scene2Button && scene2 && scene3) {
+    scene2Button.addEventListener('click', () => {
+      scene2.classList.add('fade-out');
+      scene3.style.display = 'block';
+      scene3.classList.add('fade-in');
+      setTimeout(() => {
+        scene2.style.display = 'none';
+      }, 3000); // Adjust this timeout to match the duration of your fade-out animation
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (scrollY >= 7000) {
+        moon.style.display = 'block';
+        moon.classList.add('fade-in-quick');
+
+        setTimeout(() => {
+            moon.classList.add('enlarge');
+            
+            setTimeout(() => {
+                valentineText.classList.add('text-fade-in');
+            }, 1500); // Starts after the moon expands
+        }, 700); // Starts after fade-in
+    } else {
+        rocket.style.bottom = `${scrollY * 0.1}px`;
+    }
+});
 });
 
 function showHearts() {
